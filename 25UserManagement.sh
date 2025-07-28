@@ -34,7 +34,7 @@ fi
 
 
 #Set the password for the user
-passwd $PASSWORD $USERNAME
+echo "${PASSWORD}" | passwd --stdin $USERNAME
 
 #Check if password was set successfully
 if [ "${?}" -ne 0 ]; then
